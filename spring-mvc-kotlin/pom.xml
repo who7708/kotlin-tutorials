@@ -98,7 +98,7 @@
 
     <properties>
         <thymeleaf.version>3.0.7.RELEASE</thymeleaf.version>
-        <boot.dependencies.version>2.2.0.M4</boot.dependencies.version>
+        <boot.dependencies.version>2.2.0.RELEASE</boot.dependencies.version>
     </properties>
 
 </project>

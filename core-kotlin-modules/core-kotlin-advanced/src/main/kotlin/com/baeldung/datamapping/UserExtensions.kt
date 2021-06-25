@@ -10,6 +10,13 @@ fun User.toUserView() = UserView(
 )
 
 fun User.toUserViewReflection() = with(::UserView) {
+
+    val propertiesName = User::class.memberProperties.associateBy(keySelector = {
+        it.name
+    }, valueTransform = {
+        it.name.length
+    })
+
     val propertiesByName = User::class.memberProperties.associateBy { it.name }
     callBy(parameters.associate { parameter ->
         parameter to when (parameter.name) {
